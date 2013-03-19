@@ -1,0 +1,13 @@
+name: RegionShow
+main: me.blha303.RegionShow
+version: 2
+author: blha303
+depend: [Essentials]
+commands:
+    loc:
+        description: Tells you the nearest warp to a player
+        usage: /loc [playername]
+permissions:
+    command.loc:
+        description: Allows players to use /loc
+        default: op

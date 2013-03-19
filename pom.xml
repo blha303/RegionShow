@@ -4,6 +4,18 @@
   <artifactId>RegionShow</artifactId>
   <version>2</version>
   <name>RegionShow</name>
+  <distributionManagement>
+      <repository>
+          <id>blha303-rel</id>
+          <name>blha303 Releases</name>
+          <url>http://bt:8080/content/repositories/releases/</url>
+      </repository>
+      <snapshotRepository>
+          <id>blha303-snap</id>
+          <name>blha303 Snapshots</name>
+          <url>http://bt:8080/content/repositories/snapshots/</url>
+      </snapshotRepository>
+  </distributionManagement>
   <repositories>
     <repository>
       <id>bukkit-repo</id>
@@ -16,6 +28,17 @@
   </repositories>
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.1</version>
+        <configuration>
+          <archive>
+            <addMavenDescriptor>false</addMavenDescriptor>
+          </archive>
+          <finalName>RegionShow</finalName>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
